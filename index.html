@@ -3,16 +3,28 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
+    <title>Libreto_Java_Final</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <!-- Link Jquery -->
     <script src="jquery.js"></script>
     <!--link for js-->
     <script src="script.js"></script>
+    <script src="typed.js"></script>
     <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- Link css -->
     <link rel="stylesheet" href="style.css">
+    <!-- bootstrap -->
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/cf7a571938.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- scroll for testimonies   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <!-- Link lightslider -->
     <script type="text/javascript" src="lightslider.js"></script>
     <link rel="stylesheet" type="text/css" href="lightslider.css">
@@ -56,22 +68,24 @@
         </div>
 
     </header>
-    
+
     <section class="imgslide">
         <br> <br>
         <div class="landingtext">
-            <h3>Discover and Purchase Books Online Through <br> <span>LIBRETO</span></h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.</p>
-            <div class="landingbtn">
-                <button class="buy-btn">Shop Now</button>
-                <button class="buy-btn">Explore More</button>
+            <div class="banner-area">
+                <h3>-LIBRETO-</h3>
+                <h2><span class="typed2"></span></h2>
+                <br>
+                <div class="landingbtn">
+                    <button class="shop-btn">Shop Now</button>
+                    <button class="explore-btn">Explore More</button>
+                </div>
             </div>
+
         </div>
 
         <!-- Swiper -->
-
+        <br> <br> <br><br><br><br>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="./image/book-10.png" alt=""></div>
@@ -93,6 +107,7 @@
     </section>
 
     <!-- website features section -->
+
     <section class="icons-container ">
 
         <div class="icons">
@@ -128,19 +143,15 @@
         </div>
     </section>
 
-
     <!-- featured products -->
-    <h1 class="heading"> <span>featured books</span> </h1>
-
+    <h1 class="heading"> <span>Featured Books</span> </h1>
     <section class="featuredproducts">
-
         <ul id="autoWidth" class="cs-hidden">
-
             <!-- 1 -->
             <li class="item-a">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/book-5.png" alt="">
+                        <img src="./image/deffendmeatty.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -160,7 +171,7 @@
             <li class="item-b">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/book-6.png" alt="">
+                        <img src="./image/ilys1892.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -180,7 +191,7 @@
             <li class="item-c">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/book-7.png" alt="">
+                        <img src="./image/sirene.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -297,17 +308,220 @@
             </li>
         </ul>
 
-        
+    </section>
 
+
+
+
+
+    <!-- testimonials -->
+
+    <section id="testimonial_area" class="section_padding">
+        <h1 class="heading"> <span>Our Reviews</span> </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testmonial_slider_area text-center owl-carousel">
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="./image/isko_1.png" alt="">
+                            </div>
+                            <h5>Juls Estorco</h5>
+                            <span>BookWorm</span>
+                            <p class="content">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                                ever since
+                            </p>
+                            <h6 class="socials">
+                                <i class="fa fa-instagram fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-facebook fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-linkedin fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa-brands fa-twitter fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                            </h6>
+                        </div>
+
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="./image/isko_1.png" alt="">
+                            </div>
+                            <h5>Lorgem Bosque</h5>
+                            <span>Writer @saPusoMoh</span>
+                            <p class="content">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                                ever since
+                            </p>
+                            <h6 class="socials">
+                                <i class="fa fa-instagram fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-facebook fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-linkedin fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa-brands fa-twitter fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                            </h6>
+                        </div>
+
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="./image/isko_1.png" alt="">
+                            </div>
+                            <h5>Jeane Cardiente</h5>
+                            <span>Author @You</span>
+                            <p class="content">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                                ever since
+                            </p>
+                            <h6 class="socials">
+                                <i class="fa fa-instagram fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-facebook fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-linkedin fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa-brands fa-twitter fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                            </h6>
+                        </div>
+
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="./image/isko_1.png" alt="">
+                            </div>
+                            <h5>Christy Toquero</h5>
+                            <span>Reader @mind</span>
+                            <p class="content">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                                ever since
+                            </p>
+                            <h6 class="socials">
+                                <i class="fa fa-instagram fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-facebook fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-linkedin fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa-brands fa-twitter fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                            </h6>
+                        </div>
+
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="./image/isko_1.png" alt="">
+                            </div>
+                            <h5>Grace Vellina</h5>
+                            <span>The writerreader</span>
+                            <p class="content">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                                ever since
+                            </p>
+                            <h6 class="socials">
+                                <i class="fa fa-instagram fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-facebook fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-linkedin fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa-brands fa-twitter fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                            </h6>
+                        </div>
+
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="./image/isko_1.png" alt="">
+                            </div>
+                            <h5>Josh Gonzales</h5>
+                            <span>The Producer @wattpad</span>
+                            <p class="content">
+                                Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                                ever since
+                            </p>
+                            <h6 class="socials">
+                                <i class="fa fa-instagram fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-facebook fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa fa-linkedin fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                                <i class="fa-brands fa-twitter fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="deal">
+
+        <div class="content">
+            <h3>Bakasyon Sale</h3>
+            <h1> up to 50% off</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis in atque dolore tempora
+                quaerat at fuga dolorum natus velit.</p>
+          <a href=""><button  class="shop-btn" >Shop Now</button></a> 
+        </div>
+
+        <div class="image">
+            <img src="./image/deal-img.jpg" alt="">
+        </div>
 
     </section>
 
-    
 
 
 
 
 
+
+
+
+
+
+    <footer class="footer">
+        <div class="contain">
+            <div class="row1">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our location</h4>
+                    <ul>
+                        <li><a href="#">talamban</a></li>
+                        <li><a href="#">banilad</a></li>
+                        <li><a href="#">mandaue</a></li>
+                        <li><a href="#">cabancalan</a></li>
+                        <li><a href="#">cebu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>quick links</h4>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">genre</a></li>
+                        <li><a href="#">bestsellers</a></li>
+                        <li><a href="#">shop now</a></li>
+                        <li><a href="#">Free stories</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Keep in touch</h4>
+                    <ul>
+                        <li><a href="#">+(63)955 480 0304</a></li>
+                        <li><a href="#">+123 - 345 - 567</a></li>
+                        <li><a href="#">libreto@onlinebookselling.com</a></li>
+                        <img src="./image/map.png" class="map" alt="">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="connect">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -376,6 +590,63 @@
         }
 
 
+        var swiper = new Swiper(".books-slider", {
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 850,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+        $(".testmonial_slider_area").owlCarousel({
+            autoplay: true,
+            slideSpeed: 600,
+            items: 3,
+            loop: true,
+            nav: true,
+            navText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
+            margin: 30,
+            dots: true,
+            responsive: {
+                320: {
+                    items: 1
+                },
+                767: {
+                    items: 2
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+
+        });
+
+
+        var typed = new Typed(".typed2", {
+            strings: [
+                "Free Shipping",
+                "Quality Books",
+                "Guarantee Money-Back"
+            ],
+            typeSpeed: 30,
+            backSpeed: 20,
+            loop: true
+        });
 
 
 
