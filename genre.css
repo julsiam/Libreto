@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    margin-top: 5mm;
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: .01rem;
+    background: #58261669;
+    z-index: -1;
+}
+
+.heading span {
+    font-size: 3rem;
+    padding: .5rem 2rem;
+    color: black;
+    background: #c0380be1;
+    border: .1rem solid rgba(202, 179, 102, 0.603);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: rgb(218, 128, 26);
+    background: var(--green);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--dark-color);
+}
+
+.header .header-1 {
+    background: rgb(177, 80, 15);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: black;
+    margin-left: -50mm;
+}
+
+.header .header-1 .logo i {
+    color: black;
+}
+
+.header .header-1 .search-form {
+    width: 45rem;
+    height: 5rem;
+    overflow: hidden;
+    background: rgb(63, 30, 5);
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.header .header-1 .search-form input {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: black;
+    background: rgba(248, 248, 248, 0.829);
+    border: 1px solid #0006;
+    border-radius: 20px;
+}
+
+.header .header-1 .search-form label {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: rgb(202, 108, 0);
+    cursor: pointer;
+}
+
+.header .header-1 .search-form label:hover {
+    color: #01f55fe0;
+}
+
+.header .header-1 .icons div, .header .header-1 .icons a {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover, .header .header-1 .icons a:hover {
+    color: rgb(202, 108, 0);
+}
+
+#search-btn {
+    display: none;
+}
+
+
+
+.header .menu{
+    background: rgb(202, 108, 0);
+   
+    
+}
+
+.header .menu .navbar{
+    text-align: center;
+}
+
+.header .menu .navbar a{
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    font-size: 1.7rem;
+    font-family: 'Courier Prime';
+    line-height: 35px;
+}
+
+.header .menu .navbar a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #27302a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.header .menu .navbar a:hover::after {
+    width: 100%;
+}
+
+.header .navbar .active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+
+
+
+.lbl{
+    margin: 33px;  
+}
+
+
+.section-b1{
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: hsl(0, 0%, 100%);
+}
+.section-b1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    height:auto;
+    background-color: #ffffff;
+
+
+}
+.section-b1 .pro{
+    width:15%;
+    height: 50%;
+    min-width: 100px;
+    padding: 10px 12px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(255, 115, 0, 0.527);
+    margin: 20px 0;
+    transition: 0.3s ease;
+    position: relative;
+}
+.section-b1 .pro:hover{
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.09);
+}
+.section-b1 .pro img{
+    width: 100%;
+    border-radius: 30px;
+}
+.section-b1 .pro .lbl{
+    text-align: start;
+    padding: 10px 0;
+}
+.section-b1 .pro .lbl span{
+    color: #606063;
+    font-size: 12px;
+}
+.section-b1 .pro .lbl h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+.section-b1 .pro .lbl i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+.section-b1 .pro .lbl h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
