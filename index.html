@@ -59,9 +59,18 @@
         <div class="header-2">
             <nav class="navbar">
                 <img src="./image/Libreto__1_-removebg-preview.png" alt="" style="width:200px; height: 100px; margin-bottom: -15mm;">
-                <a href="#home">Home</a>
-                <a href="#featured">Bestsellers</a> 
-                <a href="genresection.html">Genre </a>
+                <a class="active" href="index.html">Home</a>
+                <a href="bestsellers.html">Bestsellers</a>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Genre</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="sci-fi.html">Scie-Fi</a>
+                        <a href="horror.html">Horror</a>
+                        <a href="#">Romance</a>
+                        <a href="#">Rated +18</a>
+                        <a href="#">Love Story</a>
+                    </div>
+                </div>
                 <a href="#reviews">About</a>
                 <a href="#blogs">Contacts</a>
                 <a href="login.html">Sign Up</a>
@@ -88,15 +97,15 @@
         <br> <br> <br><br><br><br>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./image/book-10.png" alt=""></div>
-                <div class="swiper-slide"><img src="./image/book-9.png" alt=""></div>
-                <div class="swiper-slide"><img src="./image/book-8.png" alt=""></div>
-                <div class="swiper-slide"><img src="./image/book-7.png" alt=""></div>
-                <div class="swiper-slide"><img src="./image/book-6.png" alt=""></div>
-                <div class="swiper-slide"><img src="./image/book-5.png" alt=""></div>
-                <div class="swiper-slide"><img src="./image/book-6.png" alt=""></div>
-                <div class="swiper-slide"><img src="./image/book-7.png" alt=""></div>
-                <div class="swiper-slide"><img src="./image/book-9.png" alt=""></div>
+                <div class="swiper-slide"><img src="./image/cma.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/possessive6.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/possessive10.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/possessive7.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/possessive3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/possessive8.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/kma.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/possessive9.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/possessive5.jpg" alt=""></div>
 
             </div>
             <div class="swiper-pagination"></div>
@@ -151,7 +160,7 @@
             <li class="item-a">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/deffendmeatty.jpg" alt="">
+                        <img src="./image/kma.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -191,7 +200,7 @@
             <li class="item-c">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/sirene.jpg" alt="">
+                        <img src="./image/love2.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -211,7 +220,7 @@
             <li class="item-d">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/book-8.png" alt="">
+                        <img src="./image/possessive10.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -231,7 +240,7 @@
             <li class="item-e">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/book-9.png" alt="">
+                        <img src="./image/love3.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -251,7 +260,7 @@
             <li class="item-f">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/book-10.png" alt="">
+                        <img src="./image/possessive9.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -271,7 +280,7 @@
             <li class="item-g">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/book-6.png" alt="">
+                        <img src="./image/possessive8.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -291,7 +300,7 @@
             <li class="item-h">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/book-7.png" alt="">
+                        <img src="./image/possessive7.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -449,7 +458,7 @@
             <h1> up to 50% off</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis in atque dolore tempora
                 quaerat at fuga dolorum natus velit.</p>
-          <a href=""><button  class="shop-btn" >Shop Now</button></a> 
+            <a href=""><button class="shop-btn">Shop Now</button></a>
         </div>
 
         <div class="image">
@@ -556,7 +565,23 @@
             },
         });
 
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
 
         searchForm = document.querySelector('.search-form');
 
