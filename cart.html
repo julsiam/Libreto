@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Shop Now</title>
     <script src="jquery.js"></script>
     <!--link for js-->
     <script src="script.js"></script>
     <link rel="stylesheet" href="./cart.css">
     <script src="https://kit.fontawesome.com/9eaadacc51.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
     <style>
         * {
             font-family: 'Courier Prime';
@@ -21,7 +22,6 @@
             outline: none;
             border: none;
             text-decoration: none;
-            text-transform: capitalize;
             transition: all .2s linear;
             transition: width none;
         }
@@ -29,7 +29,6 @@
         html {
             font-size: 62.5%;
             overflow-x: hidden;
-            scroll-padding-top: 5rem;
             scroll-behavior: smooth;
         }
 
@@ -265,19 +264,20 @@
 
         }
 
-        #addNewproduct{
+        /* #addNewproduct{
             background: transparent;
             border: 2px solid white;
             padding: 10px 15px;
             color: rgb(0, 0, 0);
             border-radius: 50px;
             margin-top: 50px;
-        }
+        } */
 
         .btn{
             padding: 10px 20px;
             background: transparent;
-            border: 2px solid white;
+            border: 2px solid rgba(255, 109, 4, 0.842);;
+            color: black;
 
         }
 
@@ -286,12 +286,12 @@
             transition: 0.5s; 
         }
         
-        .btn-info{
+        /* .btn-lg{
             background: #34495e;
             padding: 10px 20px;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
-        }
+        } */
 
         .btn-danger{
             border-top-left-radius: 50px;
@@ -299,33 +299,29 @@
         }
 
 
-        .shop-btn{
-            padding: 12px 35px;
+        .btn-lg,
+        .btn-danger{
             border: none;
-            margin: 15px;
             outline: none;
             border-radius: 10px;
-            padding: 12px 35px;
-            font-size: 1.9rem;
+            padding: 12px;
+            font-size: 15px;
             cursor: pointer;
             background: radial-gradient(circle, rgba(196,101,57,0.8634804263502276) 68%, rgba(184,111,37,1) 100%);
             font-family: 'Courier Prime', monospace;
         }
 
-       
-
-
-        .shop-btn {
+        .btn-lg {
             letter-spacing: 0;
         }
 
-        .shop-btn:hover,
-        .shop-btn:active {
-            letter-spacing: 5px;
+        .btn-lg:hover,
+        .btn-lg:active {
+            letter-spacing: 3px;
         }
 
-        .shop-btn:after,
-        .shop-btn:before {
+        .btn-lg:after,
+        .btn-lg:before {
             backface-visibility: hidden;
             border: 1px solid rgba(#fff, 0);
             bottom: 0px;
@@ -337,15 +333,15 @@
             width: 0;
         }
 
-        .shop-btn:hover:after,
-        .shop-btn:hover:before {
+        .btn-lg:hover:after,
+        .btn-lg:hover:before {
             backface-visibility: hidden;
             border-color: #fff;
             transition: width 350ms ease-in-out;
             width: 70%;
         }
 
-        .shop-btn:hover:before {
+        .btn-lg:hover:before {
             bottom: auto;
             top: 0;
             width: 70%;
@@ -356,10 +352,11 @@
         }
 
         h1{
-           color: rgb(0, 0, 0);
+           color: rgb(255, 255, 255);
            padding: 10px;
-           background: #565e58;
-           position: static;
+           background: #4d2e1d;
+           margin-top: -1px;
+           margin-bottom: 0px;
            
         }
 
@@ -510,7 +507,7 @@
         <div class="header-2">
             <nav class="navbar">
                 <img src="./image/Libreto__1_-removebg-preview.png" alt="">
-                <a class="active" href="index.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="bestsellers.html">Bestsellers</a>
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Genre</button>
@@ -522,10 +519,18 @@
                         <a href="#">Love Story</a>
                     </div>
                 </div>
-                <a href="cart.html">Shop Now</a>
+                <a class="active" href="cart.html">Shop Now</a>
                 <a href="#reviews">About</a>
                 <a href="#blogs">Contacts</a>
                 <a href="login.html">Sign Up</a>
+                <h1>
+                    Shop at your own risk...
+                    <div style="float:right; cursor:pointer; color:rgb(255, 255, 255)">
+                        <span class="glyphicon glyphicon-shopping-cart my-cart-icon">
+                            <span class="badge badge-notify my-cart-badge"></span>
+                        </span>
+                    </div>
+                </h1>
 
             </nav>
         </div>
@@ -534,21 +539,14 @@
 
     <section class="shopna">
         <div class="container">
-            <br> <br> <br> <br>
-            <h1>
-                Welcome to the River of Books
-                <div style="float:right; cursor:pointer; color:rgb(255, 255, 255)">
-                    <span class="glyphicon glyphicon-shopping-cart my-cart-icon">
-                        <span class="badge badge-notify my-cart-badge"></span>
-                    </span>
-                </div>
-            </h1>
             <!-- <button type="addNewProduct" name="addNewProduct" id="addNewproduct">
                 Add New Product
             </button> -->
-            <br> <br> <br>
-
+            <br> <br>
             <div class="row">
+
+                <!-- PRODUCT1 -->
+
                 <div class="col-md-3 text-center">
                     <img src="./image/love1.jpg" width="75%" height="75%" alt="">
                     <br> <br>
@@ -559,8 +557,41 @@
                         Add to Cart
                     </button>
 
-                    <a href="" class="btn btn-info">Summary</a>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop1">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop1" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                    that it has a more-or-less normal distribution of letters, as opposed to using
+                                    'Content here, content here', making it look like readable English. Many desktop
+                                    publishing packages and web page editors now use Lorem Ipsum as their default model
+                                    text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                                    infancy. Various versions have evolved over the years, sometimes by accident,
+                                    sometimes on purpose (injected humour and the like).
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+
+                <!-- PRODUCT2 -->
 
                 <div class="col-md-3 text-center">
                     <img src="./image/love2.jpg" width="75%" height="75%" alt="">
@@ -572,8 +603,42 @@
                         Add to Cart
                     </button>
 
-                    <a href="" class="btn btn-info">Summary</a>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop2">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop2" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- PRODUCT3 -->
 
                 <div class="col-md-3 text-center">
                     <img src="./image/love3.jpg" width="75%" height="75%" alt="">
@@ -585,8 +650,42 @@
                         Add to Cart
                     </button>
 
-                    <a href="" class="btn btn-info">Summary</a>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop3">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop3" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- PRODUCT4 -->
 
                 <div class="col-md-3 text-center">
                     <img src="./image/possessive10.jpg" width="75%" height="75%" alt="">
@@ -598,11 +697,805 @@
                         Add to Cart
                     </button>
 
-                    <a href="" class="btn btn-info">Summary</a>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop4">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop4" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                
+            </div>
 
+            <br> <br>
+
+            <div class="row">
+                <!-- PRODUCT5 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive14.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 500</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="5" data-name="product 5" data-summary="summary 5"
+                        data-price="500" data-quantity="1" data-image="./image/possessive14.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop5">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop5" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                    that it has a more-or-less normal distribution of letters, as opposed to using
+                                    'Content here, content here', making it look like readable English. Many desktop
+                                    publishing packages and web page editors now use Lorem Ipsum as their default model
+                                    text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                                    infancy. Various versions have evolved over the years, sometimes by accident,
+                                    sometimes on purpose (injected humour and the like).
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- PRODUCT6 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive13.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 400</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="6" data-name="product 6" data-summary="summary 6"
+                        data-price="400" data-quantity="1" data-image="./image/possessive13.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop6">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop6" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT7 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive12.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 350</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="7" data-name="product 7" data-summary="summary 7"
+                        data-price="350" data-quantity="1" data-image="./image/possessive12.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop7">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop7" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT8 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive11.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 4 -<strong>PhP 500</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="8" data-name="product 8" data-summary="summary 8"
+                        data-price="500" data-quantity="8" data-image="./image/possessive10.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop8">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop8" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br> <br>
+            <div class="row">
+                <!-- PRODUCT9 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive6.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 500</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="9" data-name="product 9" data-summary="summary 9"
+                        data-price="500" data-quantity="1" data-image="./image/possessive14.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop9">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop9" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                    that it has a more-or-less normal distribution of letters, as opposed to using
+                                    'Content here, content here', making it look like readable English. Many desktop
+                                    publishing packages and web page editors now use Lorem Ipsum as their default model
+                                    text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                                    infancy. Various versions have evolved over the years, sometimes by accident,
+                                    sometimes on purpose (injected humour and the like).
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- PRODUCT10 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive7.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 400</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="10" data-name="product 10" data-summary="summary 10"
+                        data-price="400" data-quantity="1" data-image="./image/possessive7.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop10">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop10" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT11 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive8.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 350</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="11" data-name="product 11" data-summary="summary 11"
+                        data-price="350" data-quantity="1" data-image="./image/possessive8.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop11">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop11" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT12 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive9.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 4 -<strong>PhP 500</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="12" data-name="product 12" data-summary="summary 12"
+                        data-price="500" data-quantity="12" data-image="./image/possessive9.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop12">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop12" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br> <br>
+            <div class="row">
+                <!-- PRODUCT13 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive5.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 500</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="13" data-name="product 13" data-summary="summary 13"
+                        data-price="500" data-quantity="1" data-image="./image/possessive5.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop13">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop13" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                    that it has a more-or-less normal distribution of letters, as opposed to using
+                                    'Content here, content here', making it look like readable English. Many desktop
+                                    publishing packages and web page editors now use Lorem Ipsum as their default model
+                                    text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                                    infancy. Various versions have evolved over the years, sometimes by accident,
+                                    sometimes on purpose (injected humour and the like).
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- PRODUCT14 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive4.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 400</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="14" data-name="product 14" data-summary="summary 14"
+                        data-price="400" data-quantity="1" data-image="./image/possessive7.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop14">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop14" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT15 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive4.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 350</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="15" data-name="product 15" data-summary="summary 15"
+                        data-price="350" data-quantity="1" data-image="./image/possessive8.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop15">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop15" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT16 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/possessive3.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 4 -<strong>PhP 500</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="16" data-name="product 16" data-summary="summary 16"
+                        data-price="500" data-quantity="16" data-image="./image/possessive9.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop16">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop16" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br> <br>
+            <div class="row">
+                <!-- PRODUCT17 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/somethingphenomenal.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 500</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="17" data-name="product 17" data-summary="summary 17"
+                        data-price="500" data-quantity="1" data-image="./image/somethingphenomenal.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop17">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop17" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                    that it has a more-or-less normal distribution of letters, as opposed to using
+                                    'Content here, content here', making it look like readable English. Many desktop
+                                    publishing packages and web page editors now use Lorem Ipsum as their default model
+                                    text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                                    infancy. Various versions have evolved over the years, sometimes by accident,
+                                    sometimes on purpose (injected humour and the like).
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- PRODUCT18 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/brideofalfonso.jpeg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 400</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="18" data-name="product 18" data-summary="summary 18"
+                        data-price="400" data-quantity="1" data-image="./image/brideofalfonso.jpeg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop18">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop18" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT19 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/sirene.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 1 -<strong>PhP 350</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="19" data-name="product 19" data-summary="summary 19"
+                        data-price="350" data-quantity="1" data-image="./image/sirene.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop19">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop19" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT20 -->
+
+                <div class="col-md-3 text-center">
+                    <img src="./image/ilys1892.jpg" width="75%" height="75%" alt="">
+                    <br> <br>
+                    Product 4 -<strong>PhP 500</strong>
+                    <br> <br>
+                    <button class="btn btn-danger my-cart-btn" data-id="20" data-name="product 20" data-summary="summary 20"
+                        data-price="500" data-quantity="20" data-image="./image/ilys1892.jpg">
+                        Add to Cart
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#flipFlop20">
+                        Details
+                    </button>
+
+                    <div class="modal fade" id="flipFlop20" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalLabel">Modal Title</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the
+                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                    galley of type
+                                    and scrambled it to make a type specimen book. It has survived not only five
+                                    centuries, but also
+                                    the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -611,60 +1504,62 @@
     </section>
 
 
+
+
     <footer class="footer">
-            <div class="contain">
-                <div class="row1">
-                    <div class="footer-col">
-                        <h4>company</h4>
-                        <ul>
-                            <li><a href="#">about us</a></li>
-                            <li><a href="#">our services</a></li>
-                            <li><a href="#">privacy policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Our location</h4>
-                        <ul>
-                            <li><a href="#">talamban</a></li>
-                            <li><a href="#">banilad</a></li>
-                            <li><a href="#">mandaue</a></li>
-                            <li><a href="#">cabancalan</a></li>
-                            <li><a href="#">cebu</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>quick links</h4>
-                        <ul>
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">genre</a></li>
-                            <li><a href="#">bestsellers</a></li>
-                            <li><a href="#">shop now</a></li>
-                            <li><a href="#">Free stories</a></li>
-    
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Keep in touch</h4>
-                        <ul>
-                            <li><a href="#">+(63)955 480 0304</a></li>
-                            <li><a href="#">+123 - 345 - 567</a></li>
-                            <li><a href="#">libreto@onlinebookselling.com</a></li>
-                            <img src="./image/map.png" class="map" alt="">
-    
-                        </ul>
-                    </div>
+        <div class="contain">
+            <div class="row1">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
                 </div>
-                <div class="connect">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="footer-col">
+                    <h4>Our location</h4>
+                    <ul>
+                        <li><a href="#">talamban</a></li>
+                        <li><a href="#">banilad</a></li>
+                        <li><a href="#">mandaue</a></li>
+                        <li><a href="#">cabancalan</a></li>
+                        <li><a href="#">cebu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>quick links</h4>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">genre</a></li>
+                        <li><a href="#">bestsellers</a></li>
+                        <li><a href="#">shop now</a></li>
+                        <li><a href="#">Free stories</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Keep in touch</h4>
+                    <ul>
+                        <li><a href="#">+(63)955 480 0304</a></li>
+                        <li><a href="#">+123 - 345 - 567</a></li>
+                        <li><a href="#">libreto@onlinebookselling.com</a></li>
+                        <img src="./image/map.png" class="map" alt="">
+
+                    </ul>
                 </div>
             </div>
-        </footer>
+            <div class="connect">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         searchForm = document.querySelector('.search-form');
