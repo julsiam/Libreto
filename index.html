@@ -71,11 +71,11 @@
                         <a href="#">Love Story</a>
                     </div>
                 </div>
-                <a href="addtocart.html">Shop Now</a>
+                <a href="cart.html">Shop Now</a>
                 <a href="#reviews">About</a>
                 <a href="#blogs">Contacts</a>
                 <a href="login.html">Sign Up</a>
-               
+
             </nav>
         </div>
 
@@ -168,13 +168,13 @@
                         </div>
                     </div>
                     <div class="detail">
-                        <div class="content">
-                            <a href="">Juls Estorco</a>
-                            <span>Gwapong Tawo</span>
+                            <div class="content">
+                                <a href="">Juls Estorco</a>
+                                <span>Gwapong Tawo</span>
+                            </div>
+                            <a href="" class="price">₱500</a>
                         </div>
-
-                        <a href="" class="price">₱500</a>
-                    </div>
+                    
                 </div>
             </li>
 
@@ -182,7 +182,7 @@
             <li class="item-b">
                 <div class="box">
                     <div class="slideproduct">
-                        <img src="./image/ilys1892.jpg" alt="">
+                        <img src="./image/romance2.jpg" alt="">
                         <div class="overlay">
                             <a href="" class="buybtn">Add to Cart</a>
                         </div>
@@ -320,10 +320,6 @@
         </ul>
 
     </section>
-
-
-
-
 
     <!-- testimonials -->
 
@@ -471,14 +467,6 @@
 
 
 
-
-
-
-
-
-
-
-
     <footer class="footer">
         <div class="contain">
             <div class="row1">
@@ -537,53 +525,7 @@
 
 
 
-
-
-
-
-
-
-
-
-    <!-- Swiper JS -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 20,
-                stretch: 0,
-                depth: 200,
-                modifier: 1,
-                slideShadows: true,
-            },
-            loop: true,
-
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            },
-        });
-
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
 
         searchForm = document.querySelector('.search-form');
 
@@ -615,66 +557,6 @@
             fadeOut();
 
         }
-
-
-        var swiper = new Swiper(".books-slider", {
-            loop: true,
-            centeredSlides: true,
-            autoplay: {
-                delay: 850,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            },
-        });
-
-        $(".testmonial_slider_area").owlCarousel({
-            autoplay: true,
-            slideSpeed: 600,
-            items: 3,
-            loop: true,
-            nav: true,
-            navText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
-            margin: 30,
-            dots: true,
-            responsive: {
-                320: {
-                    items: 1
-                },
-                767: {
-                    items: 2
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3
-                }
-            }
-
-        });
-
-
-        var typed = new Typed(".typed2", {
-            strings: [
-                "Free Shipping",
-                "Quality Books",
-                "Guarantee Money-Back"
-            ],
-            typeSpeed: 30,
-            backSpeed: 20,
-            loop: true
-        });
-
 
 
     </script>

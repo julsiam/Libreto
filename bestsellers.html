@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9eaadacc51.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="bestsellers.css">
     <title>Bestsellers</title>
 
@@ -376,23 +377,7 @@
 
     <script>
 
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
+        
 
         searchForm = document.querySelector('.search-form');
 

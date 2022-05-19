@@ -316,10 +316,20 @@ html::-webkit-scrollbar-thumb {
     text-align: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.checkout .lastpic{
+    width: 50%;
+    margin-bottom: 30px;
 }
 
 .checkout .lastpic img {
     width: 450px;
+    text-align: center;
+    align-content: center;
 }
 
 .total {
