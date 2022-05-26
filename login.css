@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+body {
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-family: sans-serif;
+	background: rgb(243, 243, 243);
+}
+
+section {
+	height: 50%;
+	width: 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	box-shadow: 10px 50px 50px 16px #0000001a;
+	background-color: rgb(255, 255, 255);
+	margin-top: 30mm;
+}
+
+section .image {
+	height: 100%;
+	padding: 8mm 0 0 8mm;
+	background: white;
+}
+
+section .image img {
+	width: 300px;
+}
+
+.container {
+	position: relative;
+	background: white;
+	width: 100%;
+	padding: 40px 30px 50px 30px;
+	border-radius: 5px;
+	text-align: center;
+	height: 100%;
+}
+
+.container header {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.container .sign-txt a,
+.container .pass-txt a{
+	text-decoration: none;
+}
+
+.label {
+	padding: 20px 130px;
+	font-size: 35px;
+	font-weight: bold;
+	color: #130f40;
+}
+
+.login_form {
+	padding: 20px 40px;
+}
+
+.login_form .font {
+	font-size: 18px;
+	color: #130f40;
+	margin: 5px 0;
+}
+
+.login_form input {
+	height: 40px;
+	width: 350px;
+	padding: 0 5px;
+	font-size: 18px;
+	outline: none;
+	border: 1px solid silver;
+}
+
+.login_form .font2 {
+	margin-top: 30px;
+}
+
+.login_form button {
+	margin: 45px 0 30px 0;
+	height: 45px;
+	width: 365px;
+	font-size: 20px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: rgb(189, 104, 48);
+	border-radius: 3px;
+	border: 1px solid rgb(189, 104, 48);
+	transition: .5s;
+}
+
+.login_form button:hover {
+	background: rgb(207, 105, 37);
+}
+
+.login_form #email_error, .login_form #pass_error {
+	margin-top: 5px;
+	width: 300px;
+	font-size: 12px;
+	margin-left: 10mm;
+	color: #C62828;
+	background: rgba(255, 0, 0, 0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display: none;
+}

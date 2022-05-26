@@ -1,19 +1,15 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
     <script src="https://kit.fontawesome.com/9eaadacc51.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="addtocart.css">
-    <script src="script.js" async></script>
-    <title>Shop Now</title>
-
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="about.css">
 </head>
 
 <body>
-
     <!-- header section starts  -->
     <header class="header">
         <div class="header-1">
@@ -41,7 +37,6 @@
                 <a href="bestsellers.html">Bestsellers</a>
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Genre</button>
-                    <a class="active" href="addtocart.html">Shop Now</a>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="sci-fi.html">Scie-Fi</a>
                         <a href="horror.html">Horror</a>
@@ -50,91 +45,32 @@
                         <a href="#">Love Story</a>
                     </div>
                 </div>
-                <a href="#reviews">About</a>
+                <a href="cart.html">Shop Now</a>
+                <a class="active" href="about.html">About</a>
                 <a href="#blogs">Contacts</a>
-                <a href="login.html">Sign Up</a>
+                <a href="loginpage.html">Sign Up</a>
+
             </nav>
         </div>
 
     </header>
 
-    <section class="shopnow" id="cart">
-        <table width=100%>
-            <thead>
-                <tr>
-                    <td>cover</td>
-                    <td>book title</td>
-                    <td>price</td>
-                    <td>quantity</td>
-                    <td>total</td>
-                    <td>cancel</td>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td><img src="./image/possessive9.jpg" alt=""></td>
-                    <td>A Trade Of Hearts</td>
-                    <td>₱500.00</td>
-                    <td><input type="number" value=1></td>
-                    <td>₱500.00</td>
-                    <td><button>Delete</button></td>
-                </tr>
-                <tr>
-                    <td><img src="./image/kma.jpg" alt=""></td>
-                    <td>Kill Me, Attorney</td>
-                    <td>₱550.00</td>
-                    <td><input type="number" value=1></td>
-                    <td>₱550.00</td>
-                    <td><button>Delete</button></td>
-                </tr>
-                <tr>
-                    <td><img src="./image/romance2.jpg" alt=""></td>
-                    <td>A Trade Of Hearts</td>
-                    <td>₱500.00</td>
-                    <td><input type="number" value=1></td>
-                    <td>₱500.00</td>
-                    <td><button>Delete</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-
-    <section class="checkout" id="payment">
-        <div class="total">
-            <h3>Total Amount of Purchase</h3>
-            <table>
-                <tr>
-                    <td>Cart Total</td>
-                    <td>₱500.00</td>
-                </tr>
-
-                <tr>
-                    <td>Shipping</td>
-                    <td>Free</td>
-                </tr>
-
-                <tr>
-                    <td><strong> Total </strong></td>
-                    <td> <strong>₱500.00 </strong></td>
-                </tr>
-
-            </table>
-             <button class="shop-btn">Checkout</button>
+    <div class="about-section">
+        <div class="inner-container">
+            <h1>About Us</h1>
+            <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum,
+                eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam
+                nisi neque voluptates sit deleniti autem error
+                eos totam nisi neque.
+            </p>
+            <div class="skills">
+                <span>Web Design</span>
+                <span>Photoshop & Illustrator</span>
+                <span>Coding</span>
+            </div>
         </div>
-
-        <div class="lastpic">
-            <img src="./image/Add to Cart-amico.png" alt="">
-
-        </div>
-
-    </section>
-
-
-
-
-
+    </div>
 
     <footer class="footer">
         <div class="contain">
@@ -192,27 +128,7 @@
     </footer>
 
 
-
-
     <script>
-
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
 
         searchForm = document.querySelector('.search-form');
 
@@ -245,11 +161,8 @@
 
         }
 
+
     </script>
-
-
-
-
 </body>
 
 </html>

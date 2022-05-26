@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Validated Login Form</title>
+	<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+	<section>
+		<div class="image">
+			<h1><span style="color:rgb(189, 104, 48); font-size: 3rem"> Libreto </span></h1>
+			<h4>your books, we deliver</h4>
+			<hr> <br> <br>
+			<img src="./image/House bookshelves-pana.png" alt="">
+		</div>
+
+		<div class="container">
+			<header>Welcome to Libreto</header>
+			<div class="sign-txt">Don't have an account? <a href="#">Signup now</a></div>
+			<form class="login_form" action="dashboard.html" method="post" name="form" onsubmit="return validated()">
+				<div class="font">Email or Phone</div>
+				<input autocomplete="off" type="text" name="email">
+				<div id="email_error">9 character email add</div>
+				<div class="font font2">Password</div>
+				<input type="password" name="password">
+				<div id="pass_error">6 password character</div>
+				<button type="submit">Login</button>
+				<div class="pass-txt"><a href="#">Forgot password?</a></div>
+
+			</form>
+		</div>
+
+	</section>
+	<script src="valid.js"></script>
+</body>
+
+</html>

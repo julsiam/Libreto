@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition:all .2s linear;
+    text-transform: capitalize;
+    transition:width none;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+
+}
+
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: rgb(189, 104, 48);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+
+}
+
+.navigation.active{
+    width: 60px;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 20px;
+}
+
+.navigation ul li:nth-child(1):hover{
+    background: transparent;
+}
+
+.navigation ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #27302a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navigation ul li:hover::after {
+    width: 50%;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa{
+    color: black;
+    font-size: 20px;
+}
+
+.navigation ul li a .icon .fa:hover{
+    color: rgb(87, 26, 4);
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: rgb(226, 220, 220);
+    transition: 0.5s;
+
+
+}
+
+.main.active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.main .topbar{
+    width: 100%;
+    background:  rgb(189, 110, 57);
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.toggle::before{
+    content: "\f0c9";
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+
+}
+
+.search{
+    position: relative;
+    width: 400px;
+    margin:0 10px;
+}
+
+.search label{
+    position: relative;
+    width:100%;
+}
+
+.search label input{
+    width:100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline:none;
+    border: 1px solid gray;
+}
+
+.search label .fa{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+
+.user{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardbox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px
+}
+
+.cardbox .card{
+    position: relative;
+    display: flex;
+    box-shadow: 50px 50px 50px 16px #000000;
+    background: rgb(167, 121, 78);
+    clip-path: polygon(68% 0, 93% 48%, 68% 100%, 0% 100%, 15% 50%, 0% 0%);
+    height: 150px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 15mm;
+}
+
+.cardbox .card .number{
+    position: relative;
+    font-size: rem;
+    font-weight: 800;
+}
+
+.cardbox .card .cardName{
+    color: rgb(53, 38, 24);
+}
+
+.cardbox .card .iconBox{
+    font-size: 2rem;
+    color: #703607;
+}
+
+.details{
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    padding-top: 0;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.details .orders{
+    position: relative;
+    min-height: 530px;
+    background: white;
+    padding: 20px;
+   
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2{
+    font-weight: 600;
+}
+.btn{
+    position: relative;
+    padding: 5px 10px;
+    background: rgb(167, 121, 78);
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 6px;
+}
+
+.btn:hover{
+    background:  rgb(189, 104, 48);
+    color: black;
+}
+
+
+.orders table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;  
+    margin-top: 8mm;
+}
+
+.orders table img {
+    width: 150px;
+}
+
+.orders table td:nth-child(1) {
+    width: 150px;
+    text-align: center;
+}
+
+.orders table td:nth-child(2), .orders table td:nth-child(3), .orders table td:nth-child(4), .orders table td:nth-child(5), .orders table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+
+.orders table td:nth-child(4) input {
+    width: 70px;
+    padding: 8px;
+    border: 2px solid black;
+}
+
+.orders table tr td button.pending {
+    border: 1px solid rgba(25, 66, 17, 0.486);
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    background: yellow;
+}
+
+.orders table tr td button.delivered {
+    border: 1px solid rgba(25, 66, 17, 0.486);
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    background: rgb(59, 153, 4);
+}
+
+/* .orders table tr td button:hover {
+    background: rgb(248, 75, 6);
+    transition: .8s;
+} */
+
+.orders table thead {
+    background-color: burlywood;
+}
+
+.orders table thead td {
+    font-weight: 700;
+    font-size: 13px;
+    padding: 18px;
+}
+
+.orders table tbody tr td {
+    padding-top: 15px;
+}
+
+.orders table tbody tr:hover{
+    background: rgba(222, 184, 135, 0.836);
+    color: rgb(53, 38, 24);
+}
+
+.orders table tbody td {
+    font-size: 15px;
+}
+
+.details .customers{
+    position: relative;
+    min-height: 530px;
+    background: white;
+    padding: 20px;
+}
+
+.details .customers table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.details .customers .imgBox{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.details .customers .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details .customers table tr td h4 span{
+    font-size: 10px;
+    color: grey;
+}
+
+.details .customers table tr:hover,
+.details .customers table tr:hover td h4 span{
+    background: rgba(222, 184, 135, 0.836);
+    color: rgb(53, 38, 24);
+}
+
+.details .customers table tr td{
+    padding: 7px 10px;
+
+}
+
+.details .customers table tr td h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.show {
+    display: block;
+}
+
+/* cart section */
+
+.shopnow {
+    width: 100%;
+    min-height: 100vh;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    padding-top: 15px;
+    
+}
+
+.shopnow .addpro{
+    position: relative;
+    min-height: 530px;
+    background: white;
+    padding: 20px;
+    padding-bottom: 0;
+   
+}
+
+.shopnow table {
+    width: 100%;
+    border: 1px solid;
+    table-layout: fixed;
+    white-space: nowrap;
+    background: white;
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+.shopnow table img {
+    width: 100px;
+}
+
+.shopnow table td:nth-child(1) {
+    width: 150px;
+    text-align: center;
+}
+
+.shopnow table td:nth-child(2), .shopnow table td:nth-child(3), .shopnow table td:nth-child(4), .shopnow table td:nth-child(5), .shopnow table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+
+.shopnow table td:nth-child(4) input {
+    width: 70px;
+    padding: 8px;
+    border: 2px solid black;
+}
+
+.shopnow table tr td.summary{
+    font-size: 12px;
+}
+
+.shopnow table tr td button {
+    border: 1px solid rgba(25, 66, 17, 0.486);
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    background: transparent;
+}
+
+.shopnow table tr td button:hover {
+    background: rgb(248, 75, 6);
+    transition: .5s;
+}
+
+.shopnow table tr td button.edit:hover{
+    background: green;
+    transition: .5s;
+}
+
+.shopnow table thead {
+    border: 1px solid rgb(24, 9, 1);
+    background-color: burlywood;
+}
+
+.shopnow table thead td {
+    font-weight: 700;
+    font-size: 13px;
+    padding: 18px;
+}
+
+.shopnow table tbody tr td {
+    padding-top: 15px;
+}
+
+.shopnow table tbody td {
+    font-size: 15px;
+}
+
+.panapos{
+    background: rgb(0, 0, 0);
+    width:100%;
+    height: 20mm;
+    margin-top: -20mm;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   justify-content: space-between;
+   grid-gap: 235mm;
+   margin-bottom: -50mm;
+
+
+}
+
+.panapos .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panapos .icon i{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.panapos .icon i:hover{
+    background: white;
+    color: orangered;
+}

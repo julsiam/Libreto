@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/cf7a571938.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-book" aria-hidden="true"></i></span>
+                        <span class="title">
+                            <h1>Libreto</h1>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-tachometer" aria-hidden="true"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#orders">
+                        <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                        <span class="title">Costumer</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#customers">
+                        <span class="icon"><i class="fa fa-list-ul" aria-hidden="true"></i></span>
+                        <span class="title">Orders</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#products">
+                        <span class="icon"><i class="fa fa-book" aria-hidden="true"></i></span>
+
+                        <span class="title">books</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <span class="icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./loginpage.html">
+                        <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i> </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="./image/juls.png" alt="">
+                </div>
+            </div>
+
+            <div class="cardbox">
+                <div class="card">
+                    <div>
+                        <div class="number">116</div>
+                        <div class="cardName">Daily Visit</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="number">350</div>
+                        <div class="cardName">Customers</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="number">500</div>
+                        <div class="cardName">Inventory</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="number">250</div>
+                        <div class="cardName">Sales</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="orders">
+                    <div class="cardHeader" id="orders">
+                        <h2>Recent Orders</h2>
+                        <a href="" class="btn">View All</a>
+                    </div>
+                    <table width=100%>
+                        <thead>
+                            <tr>
+                                <td>cover</td>
+                                <td>book title</td>
+                                <td>price</td>
+                                <td>quantity</td>
+                                <td>total</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><img src="./image/possessive9.jpg" alt=""></td>
+                                <td>A Trade Of Hearts</td>
+                                <td>₱500.00</td>
+                                <td><input type="number" value=1></td>
+                                <td>₱500.00</td>
+                                <td><button class="pending"> Pending</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="./image/possessive10.jpg" alt=""></td>
+                                <td>Kill Me, Attorney</td>
+                                <td>₱550.00</td>
+                                <td><input type="number" value=1></td>
+                                <td>₱550.00</td>
+                                <td><button class="pending">Pending</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="./image/possessive12.jpg" alt=""></td>
+                                <td>A Trade Of Hearts</td>
+                                <td>₱500.00</td>
+                                <td><input type="number" value=1></td>
+                                <td>₱500.00</td>
+                                <td><button class="delivered">Delivered</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./image/romance2.jpg" alt=""></td>
+                                <td>A Trade Of Hearts</td>
+                                <td>₱500.00</td>
+                                <td><input type="number" value=1></td>
+                                <td>₱500.00</td>
+                                <td><button class="pending">Pending</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="customers">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                    </div> <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Juls Estorco <br> <span>Canlaon City Negros Oriental</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Jeane Cardiente <br> <span>Calatrava Negros Occidental</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Lorgem Bosque <br> <span>North Cebu Province</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Richel Bacayan <br> <span>Talamban</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Allan Divino <br> <span>Davao de Oro</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Ignacio Yurag <br> <span>Medellin Cebu Province</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Jan Nino Baoc<br> <span>Bantayan Island</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Juspher Balangyao <br> <span>Bohol</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Jamaila Paquaibas<br> <span>Bohol</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Christy Toquero <br> <span>Canalaon Negros Oriental</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Jovie Bandijo <br> <span>Pamplona Negros Oriental</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Anapi Vallega <br> <span>Pamplona Negros Oriental</span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBox"><img src="./image/juls.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Joshua Algadipe <br> <span>Vallehermoso Negros Oriental</span></h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br><br>
+                    <a href="" class="btn" style="margin-left:15mm;">View All</a>
+                </div>
+            </div>
+
+            <section class="shopnow" id="products">
+                <div class="addpro">
+                    <div class="cardHeader">
+                        <h2>Available Books</h2>
+                        <a href="" class="btn">Add book</a>
+                    </div>
+                    <table width=100%>
+                        <thead>
+                            <tr>
+                                <td>cover</td>
+                                <td>book title</td>
+                                <td>price</td>
+                                <td>quantity</td>
+                                <td>summary</td>
+                                <td>cancel</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><img src="./image/possessive9.jpg" alt=""></td>
+                                <td>A Trade Of Hearts</td>
+                                <td>₱500.00</td>
+                                <td><input type="number" value=50></td>
+                                <td class="summary">Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.<br>
+                                    Sequi
+                                    nesciunt magni <br>
+                                    Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.</td>
+                                <td><button>Delete</button> <button class="edit">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="./image/possessive12.jpg" alt=""></td>
+                                <td>Kill Me, Attorney</td>
+                                <td>₱550.00</td>
+                                <td><input type="number" value=50></td>
+                                <td class="summary">Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.<br>
+                                    Sequi
+                                    nesciunt magni <br>
+                                    Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.</td>
+                                <td><button>Delete</button> <button class="edit">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="./image/possessive10.jpg" alt=""></td>
+                                <td>A Trade Of Hearts</td>
+                                <td>₱500.00</td>
+                                <td><input type="number" value=50></td>
+                                <td class="summary">Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.<br>
+                                    Sequi
+                                    nesciunt magni <br>
+                                    Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.</td>
+                                <td><button>Delete</button> <button class="edit">Edit</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./image/sunburned_heart.png" alt=""></td>
+                                <td>sunburned heart</td>
+                                <td>₱350.00</td>
+                                <td><input type="number" value=50></td>
+                                <td class="summary">Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.<br>
+                                    Sequi
+                                    nesciunt magni <br>
+                                    Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.</td>
+                                <td><button>Delete</button> <button class="edit">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="./image/possessive1.jpeg" alt=""></td>
+                                <td>valerian volkzki</td>
+                                <td>₱675.00</td>
+                                <td><input type="number" value=50></td>
+                                <td class="summary">Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.<br>
+                                    Sequi
+                                    nesciunt magni <br>
+                                    Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.</td>
+                                <td><button>Delete</button> <button class="edit">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="./image/love2.jpg" alt=""></td>
+                                <td>it's a love hate relationship</td>
+                                <td>₱250.00</td>
+                                <td><input type="number" value=50></td>
+                                <td class="summary">Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.<br>
+                                    Sequi
+                                    nesciunt magni <br>
+                                    Lorem ipsum dolor <br> sit amet consectetur <br> adipisicing elit.</td>
+                                <td><button>Delete</button> <button class="edit">Edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div class="panapos">
+                <div>
+                    <img src="./image/Libreto__1_-removebg-preview.png" style="width:100px; height: 85px;" alt="">
+                </div>
+
+                <div class="icon">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            main.classList.toggle('active')
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
